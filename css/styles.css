@@ -38,21 +38,127 @@ body {
   color: var(--secondary-text-color);
 }
 
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
 .container {
-  width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0 15px;
 }
 
-.section {
+.main-header {
+  padding-top: 24px;
+  padding-bottom: 22px;
+}
+
+.page-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu-open {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.mobile-menu-icon {
+  stroke: var(--primary-text-color);
+}
+
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--main-background);
+  /* opacity: 0;
+  visibility: hidden;
+  pointer-events: none; */
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-container {
+  position: relative;
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-color: var(--close-btn-background), 0.1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+}
+
+.mobile-menu-close-icon {
+  fill: var(--primary-text-color);
+}
+
+@media screen and (min-width: 428px) {
+  .container {
+    width: 396px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 736px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1128px;
+  }
+}
+
+/* .section {
   padding-top: 120px;
   padding-bottom: 120px;
-}
+}  */
 
 /* COMPONENTS */
 
-.logo {
+/* .logo {
   font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
@@ -71,14 +177,6 @@ body {
   color: var(--fourth-text-color);
 }
 
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
 .button {
   font-family: inherit;
   cursor: pointer;
@@ -92,20 +190,14 @@ body {
 .button:focus {
   color: var(--third-text-color);
   background-color: var(--accent-color);
-}
+} */
 
 /* HEADER */
 
-.main-header {
+/* .main-header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.page-header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .main-nav {
@@ -181,11 +273,11 @@ body {
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
-}
+} */
 
 /* HERO */
 
-.hero {
+/* .hero {
   background-color: var(--primary-text-color);
   padding-top: 188px;
   padding-bottom: 188px;
@@ -224,11 +316,11 @@ body {
   padding: 16px 32px;
   margin: auto;
   border: none;
-}
+} */
 
 /* SECTIONS */
 
-.visually-hidden {
+/* .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -378,11 +470,11 @@ body {
 .company-link:hover .company-icon,
 .company-link:focus .company-icon {
   fill: currentColor;
-}
+} */
 
 /* FOOTER */
 
-.footer {
+/* .footer {
   background-color: var(--primary-text-color);
   padding-top: 100px;
   padding-bottom: 100px;
@@ -504,11 +596,11 @@ body {
 .subscribe-form-btn:hover,
 .subscribe-form-btn:focus {
   background-color: var(--accent-color);
-}
+} */
 
 /* PORTFOLIO */
 
-.section-portfolio {
+/* .section-portfolio {
   padding: 96px 0 120px;
 }
 
@@ -602,11 +694,11 @@ body {
 .portfolio-text {
   display: flex;
   align-items: flex-start;
-}
+} */
 
 /* MODAL */
 
-.blackdrop {
+/* .blackdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -838,4 +930,4 @@ body {
 .modal-form-submit:hover,
 .modal-form-submit:focus {
   background-color: var(--accent-color);
-}
+} */
