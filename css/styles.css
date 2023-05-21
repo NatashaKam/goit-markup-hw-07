@@ -134,7 +134,7 @@ body {
   cursor: pointer;
   width: 24px;
   height: 24px;
-  background-color: var(--close-btn-background), 0.1;
+  background-color: var(--close-btn-background);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 0;
