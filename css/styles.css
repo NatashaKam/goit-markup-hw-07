@@ -302,6 +302,13 @@ body {
   overflow: hidden;
 }
 
+.section-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 72px;
+}
+
 .feature-item-container {
   display: none;
 }
@@ -324,11 +331,11 @@ body {
   color: var(--secondary-text-color);
 }
 
-.feature-item:not(:last-child) {
-  margin-bottom: 72px;
+.section-examples {
+  display: none;
 }
 
-/* .section-title {
+.section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
@@ -339,13 +346,99 @@ body {
   margin-bottom: 72px;
 }
 
-.section-examples {
-  padding-top: 0;
+.section-team {
+  background-color: var(--fourth-text-color);
+  justify-content: center;
 }
 
-.examples-card {
-  width: calc((100% - 48px) / 3);
-} */
+.section-team-list {
+  justify-content: center;
+}
+
+.team-card-content {
+  padding: 32px 0;
+}
+
+.team-card {
+  background-color: var(--main-background);
+  justify-content: center;
+  align-items: center;
+  max-width: 264px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.team-description {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--brand-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list-icon {
+  fill: var(--fourth-text-color);
+}
+
+.section-customers .section-list {
+  column-gap: 16px;
+}
+
+.company-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 88px;
+  border: 1px solid var(--fifth-text-color);
+  border-radius: 4px;
+  color: var(--fifth-text-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.company-link:hover,
+.company-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.company-icon {
+  fill: var(--fifth-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.company-link:hover .company-icon,
+.company-link:focus .company-icon {
+  fill: currentColor;
+}
 
 /*---------SCREEN 428px---------*/
 
@@ -354,6 +447,14 @@ body {
     width: 428px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .section-customers .section-list {
+    justify-content: flex-start;
+  }
+
+  .company-link {
+    width: 190px;
   }
 }
 
@@ -476,10 +577,11 @@ body {
   /* SECTIONS */
 
   .section-list {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 72px;
     column-gap: 24px;
+  }
+
+  .section-team .section-list {
+    row-gap: 64px;
   }
 
   .feature-item {
@@ -490,8 +592,17 @@ body {
     text-align: start;
   }
 
-  .feature-item:not(:last-child) {
-    margin-bottom: 0;
+  .team-title {
+    text-align: center;
+  }
+
+  .section-customers .section-list {
+    column-gap: 24px;
+    justify-content: center;
+  }
+
+  .company-link {
+    width: 168px;
   }
 }
 
@@ -560,9 +671,8 @@ body {
   }
 
   .section-list {
-    display: flex;
     flex-wrap: nowrap;
-    gap: 24px;
+    row-gap: 0;
   }
 
   .feature-item {
@@ -589,119 +699,16 @@ body {
   .description {
     font-weight: 400;
   }
-}
 
-/* 
-.logo-footer {
-  color: var(--fourth-text-color);
-} */
+  .section-examples {
+    display: flex;
+  }
 
-/* SECTIONS */
+  .section-examples {
+    padding-top: 0;
+  }
 
-/* 
 
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-  color: var(--primary-text-color);
-  margin-bottom: 72px;
-}
-
-.section-examples {
-  padding-top: 0;
-}
-
-.examples-card {
-  width: calc((100% - 48px) / 3);
-}
-
-.section-team {
-  background-color: var(--fourth-text-color);
-}
-
-.team-card-content {
-  padding: 32px 0;
-}
-
-.team-card {
-  background-color: var(--main-background);
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 72px) / 4);
-}
-
-.team-text {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.social-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.social-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--brand-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: var(--accent-color);
-}
-
-.social-list-icon {
-  fill: var(--fourth-text-color);
-}
-
-.company-item {
-  width: calc((100% - 120px) / 6);
-}
-
-.company-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 168px;
-  height: 88px;
-  border: 1px solid var(--fifth-text-color);
-  border-radius: 4px;
-  color: var(--fifth-text-color);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.company-link:hover,
-.company-link:focus {
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-}
-
-.company-icon {
-  fill: var(--fifth-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.company-link:hover .company-icon,
-.company-link:focus .company-icon {
-  fill: currentColor;
-} */
 
 /* FOOTER */
 
@@ -715,6 +722,9 @@ body {
   display: flex;
   align-items: baseline;
 }
+
+.logo-footer {
+  color: var(--fourth-text-color);
 
 .footer-left {
   margin-right: 120px;
@@ -1162,4 +1172,5 @@ body {
 .modal-form-submit:hover,
 .modal-form-submit:focus {
   background-color: var(--accent-color);
-} */
+} 
+*/
