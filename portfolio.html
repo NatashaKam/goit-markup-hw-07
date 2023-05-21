@@ -19,7 +19,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <!-- <header class="main-header">
+    <header class="main-header">
       <div class="container page-header-container">
         <nav class="main-nav">
           <a class="logo logo-top link" href="./index.html"
@@ -39,6 +39,11 @@
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-open js-open-menu" type="button">
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <address class="address">
           <ul class="address-item list">
             <li class="contact-item">
@@ -54,10 +59,80 @@
           </ul>
         </address>
       </div>
-    </header> -->
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu-container">
+          <button type="button" class="mobile-menu-close-btn js-close-menu">
+            <svg class="mobile-menu-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu-top">
+            <ul class="mobile-menu-list list">
+              <li class="menu-item">
+                <a class="menu-link link" href="./index.html">Studio</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link link current" href="./portfolio.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="menu-item">
+                <a class="menu-link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu-bottom">
+            <ul class="address-item list">
+              <li class="contact-item">
+                <a class="contact-phone contact link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="contact-item">
+                <a
+                  class="contact-email contact link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="social-contact list">
+              <li class="social-contact-item">
+                <a href="" class="social-contact-link link">
+                  <svg class="social-contact-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-contact-item">
+                <a href="" class="social-contact-link link">
+                  <svg class="social-contact-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-contact-item">
+                <a href="" class="social-contact-link link">
+                  <svg class="social-contact-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-contact-item">
+                <a href="" class="social-contact-link link">
+                  <svg class="social-contact-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <!-- FILTER -->
-      <!-- <section class="section-portfolio">
+      <section class="section-portfolio">
         <div class="container">
           <h1 class="visually-hidden">Portfolio</h1>
           <ul class="filter-list list">
@@ -76,9 +151,9 @@
             <li class="item-list">
               <button class="filter-btn button" type="button">Marketing</button>
             </li>
-          </ul> -->
-      <!-- PORTFOLIO -->
-      <!-- <ul class="portfolio-list list">
+          </ul>
+          <!-- PORTFOLIO -->
+          <ul class="portfolio-list list">
             <li class="portfolio-card">
               <a class="portfolio-link link" href="">
                 <div class="portfolio-card-wrapper">
@@ -95,7 +170,7 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">
+                  <h2 class="title portfolio-title">
                     Banking App Interface Concept
                   </h2>
                   <p class="description portfolio-text">App</p>
@@ -118,7 +193,7 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">Cashless Payment</h2>
+                  <h2 class="title portfolio-title">Cashless Payment</h2>
                   <p class="description portfolio-text">Marketing</p>
                 </div>
               </a>
@@ -139,7 +214,7 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">Meditation App</h2>
+                  <h2 class="title portfolio-title">Meditation App</h2>
                   <p class="description portfolio-text">App</p>
                 </div>
               </a>
@@ -160,7 +235,7 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">Taxi Service</h2>
+                  <h2 class="title portfolio-title">Taxi Service</h2>
                   <p class="description portfolio-text">Marketing</p>
                 </div>
               </a>
@@ -181,7 +256,7 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">Screen Illustrations</h2>
+                  <h2 class="title portfolio-title">Screen Illustrations</h2>
                   <p class="description portfolio-text">Design</p>
                 </div>
               </a>
@@ -202,7 +277,7 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">Online Courses</h2>
+                  <h2 class="title portfolio-title">Online Courses</h2>
                   <p class="description portfolio-text">Marketing</p>
                 </div>
               </a>
@@ -223,7 +298,7 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">
+                  <h2 class="title portfolio-title">
                     Instagram Stories Concept
                   </h2>
                   <p class="description portfolio-text">Design</p>
@@ -246,7 +321,7 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">Organic Food</h2>
+                  <h2 class="title portfolio-title">Organic Food</h2>
                   <p class="description portfolio-text">Web Site</p>
                 </div>
               </a>
@@ -267,17 +342,17 @@
                   </p>
                 </div>
                 <div class="portfolio-card-content">
-                  <h2 class="title portfolio-text">Fresh Coffee</h2>
+                  <h2 class="title portfolio-title">Fresh Coffee</h2>
                   <p class="description portfolio-text">Web Site</p>
                 </div>
               </a>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- FOOTER -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer-container container">
         <div class="footer-left">
           <a class="logo footer-link link" href="./index.html"
@@ -342,6 +417,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
